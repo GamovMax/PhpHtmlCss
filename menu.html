@@ -1,0 +1,13 @@
+<ul>
+
+<?php
+if (!empty($_SESSION['status'])) {
+echo '<li><a href = "chat.php">Гостевая книга</a></li>'; 
+echo '<li><a href = "sver.php">Акт сверки платежей</a></li>';
+echo '<li><a href = "zakaz.php">Заказ ключей</a></li>';
+if ($_SESSION['status'] == 'admin' or $_SESSION['status'] == 'mod' ) 
+{ echo '<li><a href = "admin.php">Админская</a></li>'; } 
+echo '<li><a href = "message.php">Задать вопрос</a></li>';   }
+?>
+
+</ul>
